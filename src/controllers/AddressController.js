@@ -20,14 +20,4 @@ module.exports = {
 
     return res.json(address);
   },
-
-  async show(req, res) {
-    const { doctor_id } = req.params;
-
-    const doctor = await Doctor.findByPk(doctor_id, {
-      include: { association: 'addresses' },
-    });
-
-    return res.json(doctor);
-  },
 };

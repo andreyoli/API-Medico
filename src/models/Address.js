@@ -14,7 +14,7 @@ class Address extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Doctor, { foreignKey: 'doctor_id', as: 'owner' });
+    this.belongsTo(models.Doctor, { foreignKey: 'doctor_id', as: 'doctor' });
   }
 }
 
